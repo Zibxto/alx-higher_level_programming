@@ -8,4 +8,4 @@ def safe_print_integer(value):
         else:
             return False
     except Exception:
-        pass
+        return False
