@@ -1,5 +1,4 @@
 #!/usr/bin/python3
-import sys
 
 """
 Module 3-square
@@ -65,8 +64,7 @@ class Square:
             __size: size of square side with a default value of 0
         """
         if self.__size == 0:
-            sys.stdout.write("\n")
+            print()
         else:
             for x in range(self.__size):
-                sys.stdout.write((self.__size) * "#")
-                print()
+                print((self.__size) * "#")
