@@ -2,7 +2,7 @@
 
 """
 Module 2-square
-Defines a square class
+Defines a square class with private attribute size and validates size
 """
 
 
