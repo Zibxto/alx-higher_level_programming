@@ -1,0 +1,21 @@
+# Test cases for the print_square function
+
+import module to test:
+    >>> print_square = __import__('4-print_square').print_square
+
+first test:
+    >>> print_square(4)
+    ####
+    ####
+    ####
+    ####
+
+second test:
+    >>> print_square(0)
+    
+
+third test:
+    >>> print_square(-1)
+    Traceback (most recent call last):
+    ...
+    ValueError: size must be >= 0
