@@ -4,7 +4,7 @@
 Module 3-is_kind_of_class
 Contains a function that returns True
 if the object is an instance of a class that inherited
-from the specified class; otherwise False
+the specified class; otherwise False
 """
 
 
