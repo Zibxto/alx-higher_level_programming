@@ -9,9 +9,11 @@ available attributes and methods of an object
 
 def lookup(obj):
     """
+    To get a list of available attributes in an object
+
     Args:
-        obj: object to check
+        obj (class): object to check
     Returns:
-        The list of available attributes and methods of an object
+        list: list of available attributes and methods of an object
     """
     return dir(obj)
