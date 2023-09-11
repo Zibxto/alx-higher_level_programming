@@ -80,7 +80,9 @@ Test non-ints:
      Traceback (most recent call last):
      ...
      TypeError: checkme must be an integer
+
 Test invalid number of arguments:
+
      >>> bg = BaseGeometry()
      >>> bg.integer_validator()
      Traceback (most recent call last):
