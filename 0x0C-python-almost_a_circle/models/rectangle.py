@@ -86,3 +86,10 @@ class Rectangle(Base):
             for col in range(self.width):
                 print("#", end="")
             print()
+
+    def __str__(self):
+        """
+        Gets invoked when an instance of the class is printed
+        """
+        return (f"[{__class__.__name__}] ({self.id}) {self.x}"
+                f"/{self.y} - {self.width}/{self.height}")
