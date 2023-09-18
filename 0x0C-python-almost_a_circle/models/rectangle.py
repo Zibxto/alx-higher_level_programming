@@ -93,3 +93,12 @@ class Rectangle(Base):
         """
         return (f"[{__class__.__name__}] ({self.id}) {self.x}"
                 f"/{self.y} - {self.width}/{self.height}")
+
+    def display(self):
+        """
+        Print in stdout the Rectangle instance with
+        character # by taking care of x and y
+        """
+        print("\n" * self.__y +
+              "\n".join(" " * self.__x + "#" * self.__width
+                        for i in range(self.__height)))
