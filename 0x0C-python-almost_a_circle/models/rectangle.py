@@ -102,3 +102,20 @@ class Rectangle(Base):
         print("\n" * self.__y +
               "\n".join(" " * self.__x + "#" * self.__width
                         for i in range(self.__height)))
+
+    def update(self, *args):
+        """
+        Updates the class by assigning an argument to each attribute
+        """
+        if args:
+            for i, v in enumerate(args):
+                if i == 0:
+                    self.id = v
+                elif i == 1:
+                    self.width = v
+                elif i == 2:
+                    self.height = v
+                elif i == 3:
+                    self.x = v
+                else:
+                    self.y = v
