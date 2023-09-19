@@ -102,3 +102,43 @@ class Base:
                 o = cls.create(**dic)
                 objs.append(o)
         return objs
+
+    @staticmethod
+    def draw(list_rectangles, list_squares):
+        """
+        Opens a windows and draws all the Rectangles and Square
+        """
+        import turtle
+
+        t = turtle.Turtle()
+        t.screen.bgcolor("#7a0b4c")
+        t.pensize(3)
+        t.shape("turtle")
+
+        t.color("#f2f2f2f2")
+        for rectangle in list_rectangles:
+            t.showturtle()
+            t.up()
+            t.goto(rectangle.x, rectangle.y)
+            t.down()
+            for i in range(2):
+                t.forward(rectangle.width)
+                t.left(90)
+                t.forward(rectangle.height)
+                t.left(90)
+            t.hideturtle()
+
+        t.color("#b5e3d8")
+        for square in list_squares:
+            t.showturtle()
+            t.up()
+            t.goto(square.x, square.y)
+            t.down()
+            for i in range(2):
+                t.forward(square.width)
+                t.left(90)
+                t.forward(square.height)
+                t.left(90)
+            t.hideturtle()
+
+        turtle.exitonclick()
