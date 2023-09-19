@@ -141,4 +141,4 @@ class Base:
                 t.left(90)
             t.hideturtle()
 
-        turtle.exitonclick()
+        turtle.done()
