@@ -12,10 +12,11 @@ if __name__ == "__main__":
     conn = MySQLdb.connect(host="localhost", port=3306,
                            user=argv[1], passwd=argv[2], db=argv[3])
     cur = conn.cursor()
-    cur.execute("""SELECT cities.name FROM cities
+    query = """SELECT cities.name FROM cities
                 WHERE cities.state_id=(SELECT states.id
                 FROM states WHERE states.name LIKE %s)
-                ORDER BY cities.id ASC""", (argv[4],))
+                ORDER BY cities.id ASC"""
+    cur.execute(query, (argv[4],))
     result = cur.fetchall()
     for index, row in enumerate(result):
         if index == len(result) - 1:
