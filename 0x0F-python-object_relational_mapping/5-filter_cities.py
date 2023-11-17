@@ -17,13 +17,8 @@ if __name__ == "__main__":
                 INNER JOIN cities ON states.id = cities.state_id
                 WHERE states.name LIKE %s
                 ORDER BY cities.id ASC"""
-    cur.execute(query, (argv[4],))
-    result = cur.fetchall()
-    for index, row in enumerate(result):
-        if index == len(result) - 1:
-            print(row[0], end=" ")
-        else:
-            print(row[0], end=", ")
-    print()
+    cur.execute(query, (argv[4], ))
+
+    print(', '.join(["{:s}".format(row[0]) for row in cur.fetchall()]))
     cur.close()
     conn.close()
