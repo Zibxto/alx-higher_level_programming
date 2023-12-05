@@ -18,6 +18,6 @@ if __name__ == "__main__":
         print("No result")
     else:
         try:
-            print("[{}] {}".format(result["id"], result["name"]))
-        except Exception:
+            print("[{}] {}".format(result.get('id'), result.get('name')))
+        except KeyError:
             print("Not a valid JSON")
