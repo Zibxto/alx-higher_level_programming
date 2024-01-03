@@ -1,2 +1,2 @@
 #!/usr/bin/node
-const request = require('request')
+const request = require('request');
